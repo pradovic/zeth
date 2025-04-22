@@ -33,10 +33,11 @@ fn main() {
         )
         .expect("Failed to load client data from stdin");
     let validation_depth = stateless_client_data.blocks.len() as u64;
-    assert!(
-        stateless_client_data.chain.is_ethereum(),
-        "This program only supports Ethereum chains"
-    );
+    // assert!(
+    //     stateless_client_data.chain.is_ethereum(),
+    //     "This program only supports Ethereum chains"
+    // );
+    env::log("chain: {}", stateless_client_data.chain);
     let chain_id = stateless_client_data.chain as u64;
     // Build the block
     env::log("Validating blocks");
