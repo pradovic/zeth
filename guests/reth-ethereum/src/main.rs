@@ -37,7 +37,6 @@ fn main() {
     //     stateless_client_data.chain.is_ethereum(),
     //     "This program only supports Ethereum chains"
     // );
-    env::log("chain: {}", stateless_client_data.chain);
     let chain_id = stateless_client_data.chain as u64;
     // Build the block
     env::log("Validating blocks");
